@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <!-- ═══ Primary SEO ═══════════════════════════════════════════ -->
+    <title>ModiLander — The Ultimate Political Satire Maze Game</title>
+    <meta name="title" content="ModiLander — The Ultimate Political Satire Maze Game" />
+    <meta name="description" content="Play ModiLander — India's most sarcastic and thrilling maze chase! Pick your favorite politician, outrun the opposition, and see who survives. Play Free!" />
+    <meta name="keywords" content="ModiLander, Modi Lander Game, Modi Game, Rahul Gandhi Game, Political Satire Game, Maze Arcade Game, Free HTML5 Games, Web Browser Game" />
+    <meta name="author" content="Rahees" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- ═══ Open Graph ═══════════════════════════════════════════ -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="ModiLander 🕹️ Play Free Political Arcade" />
+    <meta property="og:description" content="Chase or be chased in India's most sarcastic maze game!" />
+
+    <!-- ═══ Icons & PWA ═══════════════════════════════════════════ -->
+    <meta name="theme-color" content="#04040f" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="ModiLander" />
+
+    <!-- ═══ Styles ════════════════════════════════════════════════ -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body class="select-none">
+    <!-- ═══ SCREEN: START ═════════════════════════════════════════ -->
+    <div id="screen-start" class="screen"></div>
+
+    <!-- ═══ SCREEN: GAME ══════════════════════════════════════════ -->
+    <div id="screen-game" class="screen game-screen hidden"></div>
+
+    <!-- ═══ SCREEN: RESULT ════════════════════════════════════════ -->
+    <div id="screen-result" class="screen result-screen hidden"></div>
+
+    <!-- ═══ DANGER WARNING SCREEN ══════════════════════════════════ -->
+    <div id="danger-screen" class="danger-screen hidden">
+      <div class="danger-crt"></div>
+      <div class="danger-stripes"></div>
+      <div class="danger-content">
+        <div class="danger-glitch" data-text="DANGER">DANGER</div>
+        <div class="danger-sub">CRITICAL SYSTEM ERROR - UNKNOWN ENTITY INTRUSION</div>
+        <div class="danger-code">ERROR_CODE: 0x666_SECRET_BOSS_INTRUDER</div>
+      </div>
+    </div>
+
+    <!-- ═══ FULL SCREEN VIDEO OVERLAY ══════════════════════════════ -->
+    <div id="video-overlay" class="video-overlay hidden">
+      <video id="boss-video" src="assets/video.mp4" playsinline></video>
+    </div>
+
+    <!-- ═══ Game Engine ═══════════════════════════════════════════ -->
+    <script src="game.js?v=6"></script>
+
+    <!-- SVG Gooey Filter for Premium Buttons -->
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display: block; height: 0; width: 0; position: absolute; pointer-events: none;">
+      <defs>
+        <filter id="goo">
+          <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10"></feGaussianBlur>
+          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7" result="goo"></feColorMatrix>
+          <feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
+        </filter>
+      </defs>
+    </svg>
+  </body>
+</html>
